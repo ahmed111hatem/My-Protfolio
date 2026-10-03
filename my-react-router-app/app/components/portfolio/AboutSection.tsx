@@ -8,32 +8,30 @@ export function AboutSection() {
         <div className="about-grid">
           <div className="about-text glass-card">
             <p className="lead">
-              I am a Computer Science student with a strong foundation in
+              I am a Computer Science professional with a strong foundation in
               programming, algorithms, databases, and software development
               methodologies.
             </p>
             <p>
-              My true passion lies in the fields of{" "}
+              My true passion lies in{" "}
               <strong>
-                Artificial Intelligence, Machine Learning, Data Science, and backend
-                systems
+                Data Engineering, Business Intelligence, and analytics pipelines
               </strong>
-              . I enjoy diving deep into data, developing custom models, and
-              engineering robust APIs that connect clean interfaces with powerful
-              backends.
+              . I enjoy cleaning and modeling data, building ETL workflows, and
+              turning insights into dashboards and reliable backend systems.
             </p>
             <p>
               As a fast learner who thrives on tackling complex problems, I&apos;m
               always searching for ways to design and build impactful solutions. I
-              am eager to apply my academic foundation to real-world projects and
-              grow alongside industry experts.
+              am eager to apply my technical foundation to real-world data
+              problems and grow alongside industry experts.
             </p>
             <div className="about-info-chips">
               <div className="info-chip">
-                <strong>Status:</strong> Studying Computer Science
+                <strong>Background:</strong> Computer Science
               </div>
               <div className="info-chip">
-                <strong>Focus:</strong> AI / ML & Backend Development
+                <strong>Focus:</strong> Data Engineering & Power BI
               </div>
               <div className="info-chip">
                 <strong>Open to:</strong> Internships, Freelance, Collaborative
@@ -64,7 +62,7 @@ export function AboutSection() {
                   fontSize="10"
                   textAnchor="middle"
                 >
-                  Input Layer
+                  Data Sources
                 </text>
                 <path
                   d="M100 70 L100 90"
@@ -89,7 +87,7 @@ export function AboutSection() {
                   fontSize="10"
                   textAnchor="middle"
                 >
-                  Hidden Layers (ML)
+                  ETL / Transform
                 </text>
                 <path
                   d="M100 120 L100 140"
@@ -114,7 +112,7 @@ export function AboutSection() {
                   fontSize="10"
                   textAnchor="middle"
                 >
-                  Output Predictions
+                  Power BI Insights
                 </text>
               </svg>
             </div>

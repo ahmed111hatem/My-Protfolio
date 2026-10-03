@@ -250,7 +250,7 @@
   }
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.25rem;
     align-items: center;
   }
   .nav-item {
@@ -927,6 +927,14 @@
     border: 1px solid var(--color-glass-border);
     border-radius: 6px;
     color: var(--color-text-muted);
+  }
+  .cert-link {
+    color: var(--color-primary);
+    transition: transform 0.2s ease, border-color 0.25s ease;
+  }
+  .cert-link:hover {
+    transform: translateY(-1px);
+    border-color: var(--color-primary-muted);
   }
   /* Contact Section & Forms */
   .contact-methods {

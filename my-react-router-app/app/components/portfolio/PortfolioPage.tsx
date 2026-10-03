@@ -5,6 +5,7 @@ import { AboutSection } from "./AboutSection";
 import { BlobBackground } from "./BlobBackground";
 import { CertificationsSection } from "./CertificationsSection";
 import { ContactSection } from "./ContactSection";
+import { EducationSection } from "./EducationSection";
 import { ExperienceSection } from "./ExperienceSection";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -24,6 +25,7 @@ export function PortfolioPage() {
       <main>
         <HeroSection />
         <AboutSection />
+        <EducationSection />
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />

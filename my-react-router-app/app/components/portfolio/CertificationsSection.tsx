@@ -15,7 +15,14 @@ export function CertificationsSection() {
               <h3>{cert.title}</h3>
               <p className="cert-issuer">{cert.issuer}</p>
               <p className="cert-desc">{cert.description}</p>
-              <div className="cert-badge">Credential Pending</div>
+              <a
+                href={cert.credentialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cert-badge cert-link"
+              >
+                View Credential
+              </a>
             </div>
           ))}
         </div>

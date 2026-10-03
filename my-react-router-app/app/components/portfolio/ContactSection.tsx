@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { SOCIAL_LINKS } from "../../data/portfolioData";
-import { GitHubIcon, LinkedInIcon, SectionHeader } from "./icons";
+import { GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon, SectionHeader } from "./icons";
 
 interface FormErrors {
   name?: string;
@@ -82,11 +82,31 @@ export function ContactSection() {
             <h3>Let&apos;s Collaborate!</h3>
             <p>
               I am open to talking about internships, projects, freelance
-              opportunities, or just chatting about artificial intelligence and
-              backend design. Drop me a line!
+              opportunities, or just chatting about data engineering, Power BI,
+              and analytics pipelines. Drop me a line!
             </p>
 
             <div className="contact-methods">
+              <a
+                href={`mailto:${SOCIAL_LINKS.email}`}
+                className="contact-method-item"
+                aria-label="Email Ahmed Hatem"
+              >
+                <div className="contact-icon">
+                  <MailIcon />
+                </div>
+                <span>{SOCIAL_LINKS.email}</span>
+              </a>
+              <a
+                href={SOCIAL_LINKS.phoneHref}
+                className="contact-method-item"
+                aria-label="Call Ahmed Hatem"
+              >
+                <div className="contact-icon">
+                  <PhoneIcon />
+                </div>
+                <span>{SOCIAL_LINKS.phoneDisplay}</span>
+              </a>
               <a
                 href={SOCIAL_LINKS.github}
                 target="_blank"

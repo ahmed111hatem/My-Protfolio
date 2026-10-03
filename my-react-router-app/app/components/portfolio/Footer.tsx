@@ -9,10 +9,11 @@ export function Footer() {
           <a href="#hero" className="logo">
             &lt;Ahmed Hatem /&gt;
           </a>
-          <p>AI / ML Engineer & Computer Science Student</p>
+          <p>Data Engineer & Computer Science</p>
         </div>
         <nav className="footer-nav" aria-label="Footer Navigation">
           <a href="#about">About</a>
+          <a href="#education">Education</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>

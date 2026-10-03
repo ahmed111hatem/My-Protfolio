@@ -1,4 +1,4 @@
-export type ProjectCategory = "all" | "ai-ml" | "backend" | "frontend";
+export type ProjectCategory = "all" | "data-analysis" | "backend";
 
 export interface Project {
   id: string;
@@ -21,6 +21,8 @@ export interface Certification {
   title: string;
   issuer: string;
   description: string;
+  // Paste the public certificate URL here (Credly, Coursera, Google Drive, etc.)
+  credentialUrl: string;
 }
 
 export interface ExperienceItem {
@@ -31,8 +33,17 @@ export interface ExperienceItem {
   bullets: string[];
 }
 
+export interface EducationItem {
+  date: string;
+  degree: string;
+  school: string;
+  description: string;
+  bullets: string[];
+}
+
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
@@ -42,54 +53,31 @@ export const NAV_LINKS = [
 
 export const PROJECT_FILTERS: { value: ProjectCategory; label: string }[] = [
   { value: "all", label: "All Projects" },
-  { value: "ai-ml", label: "AI & Machine Learning" },
+  { value: "data-analysis", label: "Data Analysis" },
   { value: "backend", label: "Backend Systems" },
-  { value: "frontend", label: "Frontend / Portfolio" },
 ];
 
 export const PROJECTS: Project[] = [
   {
-    id: "backend-server",
+    id: "project-management",
     category: "backend",
-    badge: "Backend",
-    title: "Backend Server Project",
+    badge: "Java / Backend",
+    title: "Project Management System",
     description:
-      "Designed and developed a production-ready backend server focusing on scalable data structures, high performance, secure authorization, and robust API development.",
-    techTags: ["Node.js", "REST APIs", "Database Design", "SQL"],
-    githubUrl: "https://github.com/Ahmed111Hatem",
+      "A vanilla Java desktop system for managing company projects, tasks, and operations — built around structured data models and efficient record handling.",
+    techTags: ["Java", "OOP", "SQL", "Desktop App"],
+    githubUrl: "https://github.com/ahmed111hatem/Project_Management_System",
     imageClass: "project-img-backend",
   },
   {
-    id: "student-management",
-    category: "backend",
-    badge: "Database / Java",
-    title: "Student Management System",
+    id: "spotify-analysis",
+    category: "data-analysis",
+    badge: "Data Analysis",
+    title: "Spotify Song Attributes Analysis",
     description:
-      "A complete desktop system for managing student records, course enrollments, and academic information. Designed with highly efficient relational queries.",
-    techTags: ["Java", "SQL", "Database Design", "OOP"],
-    githubUrl: "https://github.com/ahmed111hatem/Project_Management_System.git",
-    imageClass: "project-img-student",
-  },
-  {
-    id: "portfolio",
-    category: "frontend",
-    badge: "Portfolio",
-    title: "Portfolio Website",
-    description:
-      "A high-end, responsive personal portfolio website showcasing technical skills, academic projects, and professional IEEE achievements.",
-    techTags: ["HTML5", "Vanilla CSS", "JavaScript", "Glassmorphism"],
-    githubUrl: "https://github.com/Ahmed111Hatem",
-    imageClass: "project-img-portfolio",
-  },
-  {
-    id: "ml-pipeline",
-    category: "ai-ml",
-    badge: "AI / ML",
-    title: "ML & Deep Learning Pipeline",
-    description:
-      "Engineered end-to-end Machine Learning model workflows using Pandas, NumPy, and PyTorch. Performed extensive exploratory data analysis and model performance audits.",
-    techTags: ["Python", "PyTorch", "Pandas", "NumPy"],
-    githubUrl: "https://github.com/Ahmed111Hatem",
+      "Exploratory analysis of Spotify song attributes to uncover patterns in audio features, prepare datasets, and turn raw music metadata into actionable insights.",
+    techTags: ["Python", "Pandas", "NumPy", "EDA", "Visualization"],
+    githubUrl: "https://github.com/ahmed111hatem/Spotify-Song-Attributes-Analysis-",
     imageClass: "project-img-aiml",
   },
 ];
@@ -98,22 +86,37 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     title: "Languages",
     icon: "code",
-    skills: ["Python", "Java", "C++", "C", "SQL"],
+    skills: ["Python", "SQL", "Java", "C++"],
   },
   {
-    title: "AI & Machine Learning",
-    icon: "ai",
-    skills: ["Pandas", "NumPy", "PyTorch", "Data Analysis", "ML Fundamentals"],
-  },
-  {
-    title: "Backend Development",
+    title: "Data Engineering",
     icon: "backend",
-    skills: ["Node.js", "REST APIs", "Database Design"],
+    skills: ["ETL Pipelines", "Data Warehousing", "Database Design", "Data Modeling"],
   },
   {
-    title: "Tools & DevOps",
+    title: "Analytics & BI",
+    icon: "ai",
+    skills: ["Power BI", "Pandas", "NumPy", "Data Visualization"],
+  },
+  {
+    title: "Tools & Platforms",
     icon: "tools",
-    skills: ["Git", "GitHub", "VS Code"],
+    skills: ["Git", "GitHub", "VS Code", "Excel"],
+  },
+];
+
+export const EDUCATION: EducationItem[] = [
+  {
+    date: "2022 - Present",
+    degree: "Bachelor of Computer Science",
+    school: "Helwan University",
+    description:
+      "Computer Science coursework covering algorithms, databases, and software engineering, with a growing focus on data engineering and analytics.",
+    bullets: [
+      "Built a strong foundation in programming, relational databases, and software design.",
+      "Applied data analysis, SQL, and backend concepts through coursework and personal projects.",
+      "Active technical member at IEEE Helwan Branch, collaborating on workshops and coding initiatives.",
+    ],
   },
 ];
 
@@ -123,7 +126,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     title: "Machine Learning Member",
     company: "IEEE Helwan Branch",
     description:
-      "Active member in the student branch technical committee, focusing on building Machine Learning competence and collaborating on projects.",
+      "Active member of the technical committee, focusing on building Machine Learning competence and collaborating on projects.",
     bullets: [
       "Processed and prepped complex tabular datasets for training using Pandas and NumPy.",
       "Acquired solid understandings of Machine Learning fundamentals (supervised, unsupervised models).",
@@ -135,32 +138,43 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   {
-    title: "Machine Learning",
-    issuer: "Professional Certifications",
+    title: 'Data Scientist in Python',
+    issuer: 'DataCamp',
     description:
-      "Focuses on regression, classification, clustering, neural network design, and model evaluation metrics.",
+      'Covers data science workflows in Python, including data preparation, exploratory data analysis, statistical analysis, machine learning, and model evaluation.',
+    credentialUrl:
+      'https://drive.google.com/file/d/1qvbnclcCULSOld3hhccaSdpwroLLIjmA/view?usp=drive_link',
   },
   {
-    title: "Artificial Intelligence",
-    issuer: "AI Foundations & Ethics",
+    title: 'Intermediate Git',
+    issuer: 'DataCamp',
     description:
-      "Explores deep learning networks, generative models, search algorithms, and ethical considerations in AI deployment.",
+      'Covers intermediate Git workflows, including branching, merging, version control, collaboration, and managing changes across software projects.',
+    credentialUrl:
+      'https://drive.google.com/file/d/1N9Ov4LDpWuKEZ4zBq_ZfSZaM5TAyynse/view?usp=drive_link',
   },
   {
-    title: "Programming",
-    issuer: "Software Architecture & DSA",
+    title: 'Intermediate SQL',
+    issuer: 'DataCamp',
     description:
-      "Focuses on object-oriented software engineering, advanced algorithms, and memory management in C++ and Java.",
+      'Covers intermediate SQL techniques for querying and manipulating relational data, including joins, subqueries, aggregations, and advanced data analysis.',
+    credentialUrl:
+      'https://drive.google.com/file/d/1VZ4fK3s67WZr8GVMhXyahR3DMQsoG24X/view?usp=drive_link',
   },
   {
-    title: "Data Analysis",
-    issuer: "Statistical Analytics",
+    title: 'Preprocessing for Machine Learning in Python',
+    issuer: 'DataCamp',
     description:
-      "Focuses on statistical modeling, testing, data pipelines, visualization libraries, and SQL querying operations.",
+      'Covers essential data preprocessing techniques for machine learning, including handling missing values, encoding categorical data, feature scaling, and preparing datasets for model training.',
+    credentialUrl:
+      'https://drive.google.com/file/d/1tQiqMemsvv-Ny3QbPLug6HlA6xN-Ab39/view?usp=drive_link',
   },
 ];
 
 export const SOCIAL_LINKS = {
   github: "https://github.com/Ahmed111Hatem",
   linkedin: "https://www.linkedin.com/in/ahmed-hatem-416205322/",
+  email: "ahmed111hatem111@gmail.com",
+  phoneDisplay: "+20 01080602770",
+  phoneHref: "tel:+201080602770",
 } as const;

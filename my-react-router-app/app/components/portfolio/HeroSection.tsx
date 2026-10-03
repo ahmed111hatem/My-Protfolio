@@ -7,12 +7,11 @@ export function HeroSection() {
           Hi, I am <span className="gradient-text">Ahmed Hatem</span>
         </h1>
         <p className="hero-subtitle animate-slide-up-delayed">
-          Computer Science Student <span className="separator">|</span> AI & Machine
-          Learning Enthusiast
+          Data Engineer <span className="separator">|</span> Computer Science
         </p>
         <p className="hero-tagline animate-fade-in-delayed">
-          Passionate about Artificial Intelligence, Machine Learning, and building
-          intelligent solutions that solve real-world problems.
+          Passionate about data engineering, analytics, and building reliable
+          pipelines that turn raw data into real-world insight.
         </p>
         <div className="hero-actions animate-fade-in-delayed">
           <a href="#projects" className="btn btn-primary">

@@ -66,12 +66,14 @@ export function ProjectsSection() {
                     Source Code
                   </a>
                   <a
-                    href="#projects"
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-project btn-demo"
-                    aria-label={`Live Demo for ${project.title}`}
+                    aria-label={`Open ${project.title} on GitHub`}
                   >
                     <ExternalLinkIcon />
-                    Live Demo
+                    View Repo
                   </a>
                 </div>
               </div>
